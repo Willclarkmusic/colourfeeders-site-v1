@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+@font-face{
+    font-family: Primary;
+    src: url("../src/assets/fonts/Avenir Next.ttc");
+}
+
+@font-face{
+    font-family: Primary2;
+    src: url("../src/assets/fonts/Avenir.ttc");
+}
+
+@font-face{
+    font-family: Primary3;
+    src: url("../src/assets/fonts/Monaco.ttf");
+}
+
+@import "tailwindcss";
+/* public/FINAL_CHRYSALIS_REEL_60fps_1080p_h265.mp4 */
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    max-width: 1280px;
+    text-align: center;
+}
+@theme{
+    --font-primary: Primary, "sans-serif";
+    --font-secondary: Primary2, "sans-serif";
+    --font-alternate: Poppins, "sans-serif";
+    --font-alternate2: Quantico, "sans-serif";
+
+
+}
