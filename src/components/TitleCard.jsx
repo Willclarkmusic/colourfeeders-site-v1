@@ -13,12 +13,12 @@ const TitleCard = () => {
     ];
 
     return (
-        <div className="absolute z-10 lg:top-[70%] lg:left-[65%] top-[70%] left-[10%] font-extralight">
+        <div className="absolute z-10 top-[70%] left-[10%] lg:top-[70%] lg:left-[55%]   font-extralight">
             <div className="flex-row backdrop-blur-xl p-3 w-[100%] font-primary font-normal">
-                <h1 className="text-4xl text-8xl lg:text-6xl">
+                <h1 className="text-4xl sm:text-7xl lg:text-6xl">
                     Colour Feeders
                 </h1>
-                <div className="flex p-6 lg:p-3 text-4xl lg:text-sm md:text-md font-secondary">
+                <div className="flex p-6 lg:p-3 sm:text-4xl lg:text-sm font-secondary">
                     <Typewriter
                         options={{
                             strings: strings,

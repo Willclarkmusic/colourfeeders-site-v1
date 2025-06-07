@@ -14,6 +14,7 @@ import { EffectComposer, Bloom, SMAA, SSAO } from "@react-three/postprocessing";
 const VideoScene = ({ mute, setMute }) => {
     const [isLoading, setIsLoading] = useState(false);
     const videoUrl = "https://videos.colourfeeders.com/CF-Reel-2025-web.mp4";
+
     return (
         <div className="items-center h-full w-screen overflow-hidden ">
             {/* 3D Video Player */}

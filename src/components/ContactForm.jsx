@@ -25,8 +25,8 @@ const ContactButton = ({ visible, swapVisible }) => {
     return (
         <button
             onClick={swapVisible}
-            className={`absolute z-1 top-20 lg:left-[80%] left-[10%] text-white p-2 transition-all duration-500 cursor-pointer 
-                    hover:border-white border-black border-b-1 hover:text-shadow-blue-500 text-shadow-sm text-6xl lg:text-xl ${
+            className={`absolute z-1 top-40 lg:top-10 lg:left-[80%] left-[10%] text-white p-2 transition-all duration-500 cursor-pointer 
+                    hover:border-white border-black border-b-1 hover:text-shadow-blue-500 text-shadow-sm text-3xl sm:text-5xl lg:text-xl ${
                         visible ? "opacity-0" : "opacity-100"
                     }`}
         >
@@ -38,16 +38,16 @@ const ContactButton = ({ visible, swapVisible }) => {
 const ContactForm = ({ visible, swapVisible }) => {
     return (
         <div
-            className={`absolute lg:right-10 lg:top-10 h-full lg:h-auto justify-items-start w-full lg:max-w-[450px] transition-all duration-500 space-y-5 p-2 z-50
+            className={`absolute justify-items-start w-full h-[100vh] lg:right-10 lg:top-10 lg:h-auto lg:max-w-[450px] transition-all duration-500 space-y-5 p-2 z-50
                 bg-[rgb(173,173,173)] ${visible ? "opacity-100" : "opacity-0"}`}
         >
             <button
                 onClick={swapVisible}
-                className={`border-1 p-2 cursor-pointer text-black text-6xl lg:text-xl`}
+                className={`border-1 p-2 m-10 lg:m-2 cursor-pointer text-black text-6xl lg:text-xl`}
             >
                 <IoMdClose />
             </button>
-            <div className="w-full justify-items-start px-14">
+            <div className="w-full justify-items-start px-14 mt-20 lg:mt-2">
                 <h1 className="text-black font-bold text-8xl lg:text-5xl  font-primary">
                     Get in Touch
                 </h1>
@@ -56,7 +56,7 @@ const ContactForm = ({ visible, swapVisible }) => {
                     Contact us to discuss your project’s tech needs...
                 </h1>
             </div>
-            <Form />{" "}
+            <Form />
         </div>
     );
 };
@@ -98,11 +98,11 @@ const Form = () => {
                     errors={state.errors}
                 />
             </div>
-            <div className="w-full h-full lg:h-full p-2 ">
-                <label className="flex flex-row p-2 px-8">Message</label>
+            <div className="w-full lg:h-full p-2 ">
+                <label className="flex flex-row p-4 px-8">Message</label>
                 <textarea
                     name="message"
-                    className=" h-200 w-[85vw] lg:h-60 lg:w-[100%] rounded-xl bg-[rgb(191,191,191)] p-2"
+                    className=" h-160 w-[85vw] lg:h-60 lg:w-[100%] rounded-xl bg-[rgb(191,191,191)] p-2"
                 />
                 <ValidationError
                     prefix="Message"
@@ -112,7 +112,7 @@ const Form = () => {
             </div>
             <button
                 id="standbutton"
-                className="py-2 px-6 bg-black cursor-pointer flex justify-self-start mx-10"
+                className="py-6 px-10 lg:px-6 lg:py-2 bg-black cursor-pointer flex justify-self-start mx-10"
                 type="submit"
                 disabled={state.submitting}
             >
