@@ -4,6 +4,7 @@ import TitleCard from "../components/TitleCard";
 import MuteButton from "../components/MuteButton";
 import ContactComponent from "../components/ContactForm";
 import { VideoPlayer } from "../components/VideoPlayer";
+import { InfoComponent } from "../components/InfoComponent";
 
 const Home = () => {
     const [showContact, setShowContact] = useState();
@@ -25,6 +26,8 @@ const Home = () => {
             <TitleCard />
             <ContactComponent />
             <MuteButton mute={mute} setMute={setMute} />
+            <InfoComponent />
+
             {!isMobile ? (
                 <VideoScene mute={mute} setMute={setMute} />
             ) : (

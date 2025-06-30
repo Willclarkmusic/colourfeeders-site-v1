@@ -2,6 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
+
 const ContactComponent = () => {
     const [visible, setVisible] = useState(false);
     console.log();
@@ -25,7 +26,7 @@ const ContactButton = ({ visible, swapVisible }) => {
     return (
         <button
             onClick={swapVisible}
-            className={`absolute z-1 top-40 lg:top-10 lg:left-[80%] left-[10%] text-white p-2 transition-all duration-500 cursor-pointer 
+            className={`absolute  z-1 top-40 lg:top-10 left-[10%] text-white p-2 transition-all duration-500 cursor-pointer 
                     hover:border-white border-black border-b-1 hover:text-shadow-blue-500 text-shadow-sm text-3xl sm:text-5xl lg:text-xl ${
                         visible ? "opacity-0" : "opacity-100"
                     }`}
@@ -38,12 +39,14 @@ const ContactButton = ({ visible, swapVisible }) => {
 const ContactForm = ({ visible, swapVisible }) => {
     return (
         <div
-            className={`absolute justify-items-start w-full h-[100vh] lg:right-10 lg:top-10 lg:h-auto lg:max-w-[450px] transition-all duration-500 space-y-5 p-2 z-50
-                bg-[rgb(173,173,173)] ${visible ? "opacity-100" : "opacity-0"}`}
+            className={`absolute overflow-hidden justify-items-start w-full h-[100vh] lg:left-[5%] lg:top-20 lg:h-auto lg:max-w-[450px] 
+                transition-all duration-500 p-2 z-50 rounded-sm bg-[rgb(160,160,160)] ${
+                    visible ? "opacity-100" : "opacity-0"
+                }`}
         >
             <button
                 onClick={swapVisible}
-                className={`border-1 p-2 m-10 lg:m-2 cursor-pointer text-black text-6xl lg:text-xl`}
+                className={` border-1 p-2 m-10 lg:m-2 cursor-pointer text-black text-6xl lg:text-xl`}
             >
                 <IoMdClose />
             </button>
@@ -71,26 +74,31 @@ const Form = () => {
             onSubmit={handleSubmit}
             className="space-y-5 text-white place-items-center text-5xl lg:text-lg p-4 size-full"
         >
-            <div className="flex flex-row w-[95%] py-2 pb-0 border-b-1 border-white">
-                <label htmlFor="name" className="p-2">
+            <div className="flex flex-row w-[95%] py-2 pb-0 ">
+                <label htmlFor="name" className="p-2 pr-5">
                     Name
                 </label>
-                <input id="name" type="text" name="name" className="grow p-2" />
+                <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    className="grow p-2 border-b-1 border-white"
+                />
                 <ValidationError
                     prefix="Name"
                     field="name"
                     errors={state.errors}
                 />
             </div>
-            <div className="flex flex-row w-[95%] py-2 pb-0 border-b-1 border-white">
-                <label htmlFor="email" className="p-2">
+            <div className="flex flex-row w-[95%] py-2 pb-0 ">
+                <label htmlFor="email" className="p-2 pr-5">
                     Email
                 </label>
                 <input
                     id="email"
                     type="email"
                     name="email"
-                    className="grow p-2"
+                    className="grow p-2 border-b-1 border-white"
                 />
                 <ValidationError
                     prefix="Email"
@@ -102,7 +110,7 @@ const Form = () => {
                 <label className="flex flex-row p-4 px-8">Message</label>
                 <textarea
                     name="message"
-                    className=" h-160 w-[85vw] lg:h-60 lg:w-[100%] rounded-xl bg-[rgb(191,191,191)] p-2"
+                    className=" h-160 w-[85vw] lg:h-60 lg:w-[100%] rounded-sm text-white bg-[rgb(100,100,100)] p-4 "
                 />
                 <ValidationError
                     prefix="Message"
